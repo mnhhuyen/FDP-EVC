@@ -1,4 +1,4 @@
-# EVC Dataset README
+# EVC Dataset
 
 ## Tổng quan
 
