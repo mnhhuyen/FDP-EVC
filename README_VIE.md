@@ -52,6 +52,8 @@ This EVC-FDP dataset includes:
 
 ### Cách gán nhãn trong EVC
 
+Selected label = label có giá trị `p-value` lớn nhất trong từng nhóm trait tương ứng (Eye/Hair/Skin).
+
 Nhãn được lấy bằng `argmax` trên `p_value` theo từng nhóm:
 
 - `eye = argmax(probs[:, 0:3])`
@@ -65,25 +67,25 @@ Nhãn được lấy bằng `argmax` trên `p_value` theo từng nhóm:
 Mục tiêu: kiểm tra mức “chắc chắn” của nhãn lấy bằng `argmax`.
 
 - `selected p-value` = giá trị lớn nhất trong group trait của mỗi task
-- low-confidence (ở ngưỡng 0.7): `selected_p < 0.7`
+- low-confidence (ở ngưỡng 0.6): `selected_p < 0.6`
 
-### Kết quả low-confidence với threshold = 0.7
+### Kết quả low-confidence với threshold = 0.6
 
-- Eye: **1792** mẫu (**72.23%**)
-- Hair: **558** mẫu (**22.49%**)
-- Skin: **540** mẫu (**21.77%**)
+- Eye: **1518** mẫu (**61.19%**)
+- Hair: **145** mẫu (**5.84%**)
+- Skin: **309** mẫu (**12.45%**)
 
 ---
 
 ## 4) Biểu đồ trực quan
 
-### Low-confidence theo từng task (threshold = 0.7)
+### Low-confidence theo từng task (threshold = 0.6)
 
-![Low-confidence bar chart](assets/low_confidence_bar_threshold_0_7.png)
+![Low-confidence bar chart](assets/low_confidence_bar_threshold_0_6.png)
 
 ### Histogram phân bố selected p-value theo task
 
-![Selected p-value histograms](assets/selected_pvalue_hist_threshold_0_7.png)
+![Selected p-value histograms](assets/selected_pvalue_hist_threshold_0_6.png)
 
 ---
 

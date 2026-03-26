@@ -52,6 +52,8 @@ This EVC-FDP dataset includes:
 
 ### Label assignment in EVC
 
+Selected label = the label with the highest `p-value` within each corresponding trait group (Eye/Hair/Skin).
+
 Labels are assigned using `argmax` on grouped `p_value` fields:
 
 - `eye = argmax(probs[:, 0:3])`
@@ -65,25 +67,25 @@ Labels are assigned using `argmax` on grouped `p_value` fields:
 Goal: assess how confident argmax-selected labels are.
 
 - `selected p-value` = max probability in each task group
-- low-confidence at threshold 0.7: `selected_p < 0.7`
+- low-confidence at threshold 0.6: `selected_p < 0.6`
 
-### Low-confidence results at threshold = 0.7
+### Low-confidence results at threshold = 0.6
 
-- Eye: **1792** samples (**72.23%**)
-- Hair: **558** samples (**22.49%**)
-- Skin: **540** samples (**21.77%**)
+- Eye: **1518** samples (**61.19%**)
+- Hair: **145** samples (**5.84%**)
+- Skin: **309** samples (**12.45%**)
 
 ---
 
 ## 4) Visualizations
 
-### Low-confidence by task (threshold = 0.7)
+### Low-confidence by task (threshold = 0.6)
 
-![Low-confidence bar chart](assets/low_confidence_bar_threshold_0_7.png)
+![Low-confidence bar chart](assets/low_confidence_bar_threshold_0_6.png)
 
 ### Histogram of selected p-values by task
 
-![Selected p-value histograms](assets/selected_pvalue_hist_threshold_0_7.png)
+![Selected p-value histograms](assets/selected_pvalue_hist_threshold_0_6.png)
 
 ---
 
