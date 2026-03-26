@@ -14,7 +14,7 @@ This EVC-FDP dataset includes:
 - Kích thước: **(2504, 45)**
 - Có **23 sample thiếu `input_csv`**
 
-### Cấu trúc quan trọng
+### Cấu trúc
 
 - `sample`: mã mẫu
 - `input_csv`: chuỗi 2 dòng trong 1 ô CSV
